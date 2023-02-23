@@ -48,6 +48,30 @@ namespace Länder
                 }
             }
 
+            int lowestindex = 0;
+            int highestindex = 0;
+            int lowest = 999999999;
+            int highest = -999999999;
+            for (int i = 0;i < test.Length; i++)
+            {
+                int loworhigh = Int32.Parse(test[i].invånarantal);
+                if ( loworhigh > highest && test[1].styrestyp == "republik")
+                {
+                    highest = loworhigh;
+                    highestindex = i;
+                }
+                if (loworhigh < lowest && test[1].styrestyp == "republik")
+                {
+                    lowest = loworhigh;
+                    lowestindex = i;
+                }
+
+            }
+            Console.WriteLine("==== Republik med minsta invånarantal =====");
+            test[lowestindex].print();
+            Console.WriteLine("==== Republik med högsta invånarantal =====");
+            test[highestindex].print();
+
 
         }
 
