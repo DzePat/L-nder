@@ -23,20 +23,29 @@ namespace Länder
             Land tyskland = new Land() { namn = "Tyskland", styrestyp = "republik", huvudstad = "Berlin", invånarantal = "83783902" };
             Land sanMarino = new Land() { namn = "San Marino", styrestyp = "republik", huvudstad = "San Marino", invånarantal = "33600" };
             
+            
 
             Land[] test = new Land[7];
             test[0] = sverige;
             test[1] = tyskland;
             test[2] = sanMarino;
             test[3] = new Land() { namn = "Danmark", styrestyp = "monarki", huvudstad = "Köpenhamn", invånarantal = "5928364" };
-            test[4] = new Land() { namn = "Italien", styrestyp = "republic", huvudstad = "Rom", invånarantal = "58853482" };
-            test[5] = new Land() { namn = "Tjekien", styrestyp = "republic", huvudstad = "San Marino", invånarantal = "10551219" };
-            test[6] = new Land() { namn = "Rumänien", styrestyp = "republic", huvudstad = "Bukarest", invånarantal = "19760314" };
+            test[4] = new Land() { namn = "Italien", styrestyp = "republik", huvudstad = "Rom", invånarantal = "58853482" };
+            test[5] = new Land() { namn = "Tjekien", styrestyp = "republik", huvudstad = "San Marino", invånarantal = "10551219" };
+            test[6] = new Land() { namn = "Rumänien", styrestyp = "republik", huvudstad = "Bukarest", invånarantal = "19760314" };
 
 
             foreach(Land land in test)
             {
                 land.print();
+            }
+
+            for (int i = 0; i < test.Length; i++)
+            {
+                if (test[i].styrestyp == "republik")
+                {
+                    Console.WriteLine(test[i].namn);
+                }
             }
 
 
