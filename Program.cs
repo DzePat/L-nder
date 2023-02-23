@@ -44,7 +44,7 @@ namespace Länder
             {
                 if (test[i].styrestyp == "republik")
                 {
-                    Console.WriteLine(test[i].namn);
+                    Console.WriteLine($"index: {i} land: " + test[i].namn);
                 }
             }
 
