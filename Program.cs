@@ -33,6 +33,13 @@ namespace Länder
             test[5] = new Land() { namn = "Tjekien", styrestyp = "republic", huvudstad = "San Marino", invånarantal = "10551219" };
             test[6] = new Land() { namn = "Rumänien", styrestyp = "republic", huvudstad = "Bukarest", invånarantal = "19760314" };
 
+
+            foreach(Land land in test)
+            {
+                land.print();
+            }
+
+
         }
 
         
